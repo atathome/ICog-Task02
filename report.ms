@@ -43,4 +43,21 @@ This can be done by first selecting two random primes and checking if they multi
 Quantum Computers
 .PP
 
-Are a special type of computer that can in a single step perform a number of computations that doesn't scale linearly to the number of gates/cores/pipeline phases used to build it. They do this by using the property of superposition where a \f[I]qbit\f[R] can be in a combination of multiple states at the same time. It has to be noted that the
+Are a special type of computer that can in a single step perform a number of computations that doesn't scale linearly to the number of gates/cores/pipeline phases used to build it. They do this by using the property of superposition where a \f[I]qbit\f[R] can be in a combination of multiple states at the same time. It has to be noted that the qbit will when observed land on one of these states with a given probability and then the quantum properties (entanglement, superposition...) are lost. Quantum computers can only answer one question very fast not multiple questions at the same time. The important properties of quantum computers are:
+
+.IP \[bu]
+Superposition - Used to represent a combination of multiple states
+.IP \[bu]
+Interference - The basic concept of a computational step where correct answers reinforce while incorrect answers cancel out
+.IP \[bu]
+Entanglement - When a state cannot be decomposed cleanly, meaning that a part of the system affects another part of the system
+
+.SH
+Breaking RSA on Quantum Computers (Shor's Algorithm)
+.LP
+To break RSA on a quantum computer we first represent our state a s a superposition of all the guesses for p. $left | 1 right > + left | 2 right > + left | 3 right > ...$ then you from this create a superposition which for each guess has $left | x, a sup x mod N right >$ now if you measure only the remainder part it collapses on a single value \f[I]but the other half of the superposition doesn't\f[R]. This is one of the properties of a quantum system if measured by part the other part remains in a superposition but one in which the measured value is guaranteed to be the same for all components of the superposition. This is why we kept all the quesses in the previous step since all the values of x that yield constant $a sup x$ \f[I]mod N\f[R] are separated by a period of $g$ the number which when given our number which is unlikely to share factors with $N$ gives us a pair which are likely to. Now if we input this superposition into a system called the quantum forier transform the remaining state will be the frequency of the superposition $left | 1 over g right >$ and so our result is found in a few sequential steps.
+
+.SH
+.ps +3
+.ce
+Post Quantum Security
