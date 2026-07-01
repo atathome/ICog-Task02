@@ -61,3 +61,6 @@ To break RSA on a quantum computer we first represent our state a s a superposit
 .ps +3
 .ce
 Post Quantum Security
+.PP
+
+In the first segment we have hilighted how critical asymmetric encryption is so if quantum computers can crack one of the most widely used asymmetric encryption schemes, is all lost? First of all there is no proof that all encryptions cannot be broken effectively by quantum or even classical computers. The best we have are conditional statements on what seem to be highly likely conjenctures like the \f[B]PRG\f[R] conjecncture that have held up in practical expirience.
