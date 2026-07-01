@@ -26,7 +26,7 @@ Find $phi (N) = (p - 1) times (q - 1)$
 .IP \[bu]
 Find $e$ such that $gcd(e, phi ) = 1$
 .IP \[bu]
-Find $d$ such that $e times d == 1$ $mod$ $N$ that is the multiplicative inverse of \f[I]e mod N\f[R]
+Find $d$ such that $e times d == 1$ $mod$ $phi$ that is the multiplicative inverse of \f[I]e mod phi\f[R]
 .IP \[bu]
 $C == M sup e$ \f[I]mod N\f[R] therefore $(N, e)$ is the public key
 .IP \[bu]
