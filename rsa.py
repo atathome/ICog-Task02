@@ -9,7 +9,7 @@ import time
 lower_bound = 200   #only primes bigger than this will be used
 n_recipients = 4    # number of recipients in the simulation
 n_primes = 100
-wait_time = 20      #max running time for brute forcing a message
+max_work_time = 20  #max running time for brute forcing a message
 
 def pow_mod(x, y, m):
     res = 1
@@ -110,7 +110,7 @@ def try_get_privatekey(n):
             return private_key
 
         current_time = time.clock_gettime(time.CLOCK_MONOTONIC)
-        if current_time - start_time >= wait_time:
+        if current_time - start_time >= max_work_time:
             break
 
     return
